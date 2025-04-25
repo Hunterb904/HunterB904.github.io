@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,58 +5,83 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Hunter Biersdorff | Portfolio</title>
   <style>
+    html {
+      scroll-behavior: smooth;
+    }
     body {
       font-family: 'Segoe UI', sans-serif;
       margin: 0;
-      padding: 0;
-      background: #f7f7f7;
+      background: #f9fafb;
+      color: #1f2937;
     }
     header {
-      background-color: #1f2937;
+      background: linear-gradient(135deg, #6366f1, #8b5cf6);
+      padding: 2rem;
       color: white;
-      padding: 1rem 2rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
+      text-align: center;
+    }
+    nav {
+      margin-top: 1rem;
     }
     nav a {
-      margin-left: 1rem;
+      margin: 0 1rem;
       color: white;
       text-decoration: none;
+      font-weight: 500;
     }
     nav a:hover {
       text-decoration: underline;
     }
     section {
-      padding: 2rem;
-      max-width: 800px;
+      padding: 3rem 1rem;
+      max-width: 900px;
       margin: auto;
     }
     .section-title {
-      font-size: 2rem;
+      font-size: 2.2rem;
       margin-bottom: 1rem;
-      color: #111827;
+      text-align: center;
+      color: #4f46e5;
     }
     .card {
       background: white;
-      border-radius: 8px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-      padding: 1rem;
-      margin-bottom: 1rem;
+      border-radius: 12px;
+      padding: 1.5rem;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      margin-bottom: 2rem;
+      transition: transform 0.2s ease;
+    }
+    .card:hover {
+      transform: translateY(-5px);
     }
     footer {
-      text-align: center;
-      padding: 1rem;
       background-color: #1f2937;
       color: white;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 3rem;
+    }
+    a.button {
+      display: inline-block;
+      background-color: #6366f1;
+      color: white;
+      padding: 0.6rem 1.2rem;
+      border-radius: 6px;
+      text-decoration: none;
+      margin-top: 1rem;
+      font-weight: 600;
+      transition: background-color 0.2s ease;
+    }
+    a.button:hover {
+      background-color: #4f46e5;
     }
   </style>
 </head>
 <body>
 
   <header>
-    <div><strong>Hunter Biersdorff</strong></div>
+    <h1>Hunter Biersdorff</h1>
+    <p>Support Engineer | Problem Solver | Tech Enthusiast</p>
     <nav>
       <a href="#about">About</a>
       <a href="#portfolio">Portfolio</a>
@@ -67,45 +91,47 @@
   </header>
 
   <section id="about">
-    <div class="section-title">About Me</div>
+    <h2 class="section-title">About Me</h2>
     <div class="card">
-      <p>Hello! I'm Hunter, a passionate support engineer with a knack for solving problems and building relationships. I'm currently seeking new opportunities to grow in tech and contribute to great teams.</p>
+      <p>Hi, I'm Hunter — a dedicated technical support engineer with a passion for problem-solving and clear communication. I bring a customer-first mindset and technical skills to every challenge I take on.</p>
     </div>
   </section>
 
   <section id="portfolio">
-    <div class="section-title">Portfolio</div>
+    <h2 class="section-title">Portfolio</h2>
     <div class="card">
-      <h3>Project One</h3>
-      <p>Short description of the project, what tech you used, and your role.</p>
+      <h3>⚙️ Tech Troubleshooter</h3>
+      <p>Tool that helped automate ticket triage using custom filters and simple AI logic.</p>
+      <a href="https://github.com/YOURUSERNAME/project-one" target="_blank" class="button">View Project</a>
     </div>
     <div class="card">
-      <h3>Project Two</h3>
-      <p>Another cool thing you built — include links to GitHub repos or demos below.</p>
+      <h3>📊 Data Dashboard</h3>
+      <p>A simple dashboard pulling real-time metrics using JavaScript and Chart.js.</p>
+      <a href="https://github.com/YOURUSERNAME/project-two" target="_blank" class="button">View Project</a>
     </div>
   </section>
 
   <section id="resume">
-    <div class="section-title">Resume</div>
+    <h2 class="section-title">Resume</h2>
     <div class="card">
-      <p>You can <a href="assets/resume.pdf" target="_blank">view my resume here</a>.</p>
-      <ul>
-        <li><strong>Experience:</strong> Technical Support, ServiceNow, Linux</li>
-        <li><strong>Skills:</strong> HTML, CSS, JavaScript, APIs, SQL, Debugging</li>
-      </ul>
+      <p>You can download or view my resume below:</p>
+      <a href="assets/resume.pdf" target="_blank" class="button">View Resume (PDF)</a>
     </div>
   </section>
 
   <section id="contact">
-    <div class="section-title">Contact</div>
+    <h2 class="section-title">Contact</h2>
     <div class="card">
-      <p>Email: <a href="mailto:hunterbiersdorff@gmail.com">hunterbiersdorff@gmail.com</a></p>
-      <p>Phone: 408-466-4031</p>
-      <p>LinkedIn: <a href="https://www.linkedin.com/in/hunterbiersdorff" target="_blank">linkedin.com/in/HunterBiersdorff</a></p>
-      <p>GitHub: <a href="https://github.com/Hunterb905" target="_blank">github.com/Hunterb904</a></p>
+      <p><strong>Email:</strong> <a href="mailto:hunterbiersdorff@gmail.com">hunterbiersdorff@gmail.com</a></p>
+      <p><strong>Phone:</strong> 408-466-4031</p>
+      <p><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/YOURUSERNAME" target="_blank">linkedin.com/in/YOURUSERNAME</a></p>
+      <p><strong>GitHub:</strong> <a href="https://github.com/YOURUSERNAME" target="_blank">github.com/YOURUSERNAME</a></p>
     </div>
   </section>
 
   <footer>
-    © 2025 Hunter Biersdorff. All rights reserved.
+    © 2025 Hunter Biersdorff • Built with 💻 and ☕
   </footer>
+
+</body>
+</html>
