@@ -13,102 +13,152 @@
     }
 
     body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-      background-color: #ffffff;
-      color: #333;
+      font-family: 'Roboto', sans-serif;
+      background: linear-gradient(135deg, #4e73df, #1a73e8);
+      color: #fff;
       line-height: 1.6;
     }
 
-    /* Header and Navigation */
+    h1, h2 {
+      color: #fff;
+      font-weight: 700;
+    }
+
+    p {
+      color: rgba(255, 255, 255, 0.8);
+    }
+
+    /* Header Styles */
     header {
-      background-color: #ffffff;
-      padding: 2rem 1rem;
-      text-align: center;
-      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 2rem 3rem;
+      background: rgba(0, 0, 0, 0.5);
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
     }
 
     header h1 {
       font-size: 2.5rem;
-      font-weight: 700;
-      color: #1d1d1f;
-      margin-bottom: 1rem;
+      text-transform: uppercase;
+      letter-spacing: 2px;
     }
 
     nav {
-      margin-top: 1rem;
+      display: flex;
+      gap: 1rem;
     }
 
     nav a {
-      margin: 0 1rem;
       text-decoration: none;
-      color: #1d1d1f;
+      color: #fff;
       font-weight: 500;
-      padding-bottom: 2px;
-      border-bottom: 2px solid transparent;
-      transition: border-color 0.3s ease;
+      transition: color 0.3s ease;
     }
 
     nav a:hover {
-      border-color: #0071e3;
+      color: #ff6b6b;
     }
 
     /* Main Section Styles */
     main {
-      max-width: 1200px;
-      margin: 2rem auto;
-      padding: 0 2rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
       text-align: center;
+      padding: 2rem;
+      color: #fff;
     }
 
-    h2 {
-      font-size: 2rem;
-      margin-bottom: 1rem;
-      color: #0071e3;
-    }
-
-    p {
-      color: #555;
-      font-size: 1.1rem;
-      margin-bottom: 1.5rem;
-    }
-
-    /* Profile and Bio */
     .profile {
-      max-width: 800px;
-      margin: 3rem auto;
-      padding: 0 1rem;
-      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1.5rem;
+      margin-bottom: 3rem;
     }
 
     .profile img {
-      width: 180px;
-      height: 180px;
       border-radius: 50%;
+      width: 200px;
+      height: 200px;
       object-fit: cover;
-      margin-bottom: 1.5rem;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
     }
 
     .profile h1 {
-      font-size: 2rem;
-      margin-bottom: 0.5rem;
+      font-size: 3rem;
+      margin-top: 1rem;
     }
 
     .profile p {
+      max-width: 700px;
       font-size: 1.2rem;
-      color: #555;
+      line-height: 1.8;
+      margin: 0 auto;
     }
 
-    /* Footer */
-    footer {
+    /* Fancy Quote Styles */
+    blockquote {
+      font-family: 'Georgia', serif;
+      font-size: 1.8rem;
+      font-style: italic;
+      margin: 3rem 0;
+      padding: 2rem;
+      background: rgba(255, 255, 255, 0.1);
+      border-left: 5px solid #ff6b6b;
       text-align: center;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    blockquote p {
+      margin-bottom: 1rem;
+    }
+
+    blockquote footer {
       font-size: 1rem;
-      color: #888;
-      padding: 2rem 1rem;
-      background-color: #f9f9f9;
+      color: rgba(255, 255, 255, 0.8);
+    }
+
+    .btn {
+      padding: 12px 30px;
+      font-size: 1rem;
+      background-color: #ff6b6b;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+    }
+
+    .btn:hover {
+      background-color: #ff4d4d;
+    }
+
+    .about-link {
+      margin-top: 2rem;
+      font-size: 1.1rem;
+      color: #ff6b6b;
+    }
+
+    .about-link:hover {
+      text-decoration: underline;
+    }
+
+    /* Footer Styles */
+    footer {
+      background-color: rgba(0, 0, 0, 0.7);
+      color: #fff;
+      text-align: center;
+      padding: 1rem;
+      font-size: 1rem;
     }
 
     footer a {
-      color: #0071e3;
+      color: #ff6b6b;
       text-decoration: none;
     }
 
@@ -116,34 +166,30 @@
       text-decoration: underline;
     }
 
-    /* Responsive Design */
+    /* Mobile Responsive */
     @media (max-width: 768px) {
+      .profile h1 {
+        font-size: 2.5rem;
+      }
+
+      .profile p {
+        font-size: 1rem;
+      }
+
+      header {
+        flex-direction: column;
+        padding: 1rem;
+      }
+
       header h1 {
         font-size: 2rem;
-      }
-
-      nav a {
-        margin: 0 0.5rem;
-      }
-
-      .profile img {
-        width: 150px;
-        height: 150px;
-      }
-
-      .profile h1 {
-        font-size: 1.5rem;
-      }
-
-      main {
-        padding: 0 1rem;
       }
     }
   </style>
 </head>
 <body>
   <header>
-    <h1>Welcome to My Portfolio</h1>
+    <h1>Hunter Biersdorff</h1>
     <nav>
       <a href="index.html">Home</a>
       <a href="about.html">About</a>
@@ -152,15 +198,23 @@
       <a href="contact.html">Contact</a>
     </nav>
   </header>
+
   <main>
+    <!-- Fancy Quote Section -->
+    <blockquote>
+      <p>"Success is not Final, Failure is not fatal; It is the courage to continue that counts."</p>
+      <footer>- Winston Churchill</footer>
+    </blockquote>
+
     <div class="profile">
       <img src="assets/photo.jpg" alt="Hunter Biersdorff" />
       <h1>Hunter Biersdorff</h1>
-      <p> "Succes is not Final, Failure is not fatal; It is the courage to continue that counts" Winston Chruchill
-      <p>Welcome to my personal website! I'm a Software Engineer passionate about building great products and solving complex problems. Feel free to browse through my work and learn more about me.</p>
+      <p>Welcome to my personal portfolio! I am a passionate Software Engineer with a knack for problem-solving and creating impactful solutions. I specialize in web development and enjoy building user-friendly applications. Explore my work and get to know me better!</p>
       <a href="resume.html" class="btn">View My Resume</a>
+      <a href="about.html" class="about-link">Learn more about me</a>
     </div>
   </main>
+
   <footer>
     <p>© 2025 Hunter Biersdorff | <a href="mailto:hunterbiersdorff@gmail.com">Email me</a></p>
   </footer>
