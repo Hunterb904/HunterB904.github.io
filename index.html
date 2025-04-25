@@ -3,124 +3,67 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Hunter Biersdorff | Portfolio</title>
+  <title>Hunter Biersdorff</title>
   <style>
-    :root {
-      --primary: #0a0a0a;
-      --accent: #0071e3;
-      --background: #ffffff;
-      --text: #1d1d1f;
-      --gray: #6e6e73;
-    }
-
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
     body {
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-      background: var(--background);
-      color: var(--text);
-      line-height: 1.6;
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background: #ffffff;
+      color: #1d1d1f;
     }
 
     header {
-      background: var(--background);
-      padding: 2rem 1rem;
       text-align: center;
-      border-bottom: 1px solid #e5e5e5;
-    }
-
-    header h1 {
-      font-size: 2.5rem;
-      font-weight: 600;
-    }
-
-    header p {
-      color: var(--gray);
-      font-size: 1.2rem;
-      margin-top: 0.5rem;
+      padding: 3rem 1rem 2rem;
     }
 
     nav {
-      display: flex;
-      justify-content: center;
-      gap: 2rem;
-      margin-top: 2rem;
+      margin-top: 1rem;
     }
 
     nav a {
+      margin: 0 1rem;
       text-decoration: none;
-      color: var(--text);
+      color: #1d1d1f;
       font-weight: 500;
-      padding: 0.5rem 0;
+      padding-bottom: 2px;
       border-bottom: 2px solid transparent;
-      transition: all 0.2s ease;
     }
 
     nav a:hover {
-      border-bottom: 2px solid var(--accent);
-      color: var(--accent);
+      border-color: #0071e3;
     }
 
-    section {
-      max-width: 900px;
-      margin: 4rem auto;
+    .profile {
+      max-width: 800px;
+      margin: 3rem auto;
+      text-align: center;
       padding: 0 1rem;
     }
 
-    .section-title {
+    .profile img {
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 1.5rem;
+    }
+
+    .profile h1 {
       font-size: 2rem;
-      font-weight: 600;
-      text-align: center;
-      margin-bottom: 2rem;
+      margin-bottom: 0.5rem;
     }
 
-    .card {
-      background: #f9f9f9;
-      border-radius: 16px;
-      padding: 2rem;
-      margin-bottom: 2rem;
-      transition: all 0.3s ease;
-    }
-
-    .card:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
-    }
-
-    .button {
-      display: inline-block;
-      background: var(--accent);
-      color: white;
-      text-decoration: none;
-      padding: 0.8rem 1.5rem;
-      border-radius: 8px;
-      margin-top: 1rem;
-      font-weight: 600;
-      transition: background 0.2s ease;
-    }
-
-    .button:hover {
-      background: #005bb5;
+    .profile p {
+      font-size: 1.1rem;
+      color: #555;
     }
 
     footer {
-      background: #f5f5f7;
-      color: var(--gray);
       text-align: center;
+      color: #888;
       padding: 2rem 1rem;
       font-size: 0.9rem;
-      border-top: 1px solid #e5e5e5;
-    }
-
-    @media (max-width: 600px) {
-      nav {
-        flex-direction: column;
-        gap: 1rem;
-      }
     }
   </style>
 </head>
@@ -128,56 +71,22 @@
 
   <header>
     <h1>Hunter Biersdorff</h1>
-    <p>Technical Support Engineer | Driven by Clarity and Curiosity</p>
     <nav>
-      <a href="#about">About</a>
-      <a href="#projects">Projects</a>
-      <a href="#resume">Resume</a>
-      <a href="#contact">Contact</a>
+      <a href="about.html">About</a>
+      <a href="projects.html">Projects</a>
+      <a href="resume.html">Resume</a>
+      <a href="contact.html">Contact</a>
     </nav>
   </header>
 
-  <section id="about">
-    <h2 class="section-title">About Me</h2>
-    <div class="card">
-      <p>I’m a support engineer passionate about solving problems, helping people, and building simple solutions to complex challenges. I blend empathy and technical know-how to create outstanding customer experiences — and I’m always ready to learn more.</p>
-    </div>
-  </section>
-
-  <section id="projects">
-    <h2 class="section-title">Projects</h2>
-    <div class="card">
-      <h3>🚀 Triage Bot</h3>
-      <p>An automated support ticket filter that uses keyword logic to categorize incoming requests. Built using JavaScript and integrated into ServiceNow workflows.</p>
-      <a href="https://github.com/YOURUSERNAME/project-1" class="button" target="_blank">View Project</a>
-    </div>
-    <div class="card">
-      <h3>📈 Support Dashboard</h3>
-      <p>A lightweight dashboard showing real-time support metrics using Chart.js and a REST API.</p>
-      <a href="https://github.com/YOURUSERNAME/project-2" class="button" target="_blank">View Project</a>
-    </div>
-  </section>
-
-  <section id="resume">
-    <h2 class="section-title">Resume</h2>
-    <div class="card">
-      <p>View or download my latest resume for a detailed breakdown of my experience and skills.</p>
-      <a href="assets/resume.pdf" class="button" target="_blank">Download Resume</a>
-    </div>
-  </section>
-
-  <section id="contact">
-    <h2 class="section-title">Contact</h2>
-    <div class="card">
-      <p><strong>Email:</strong> <a href="mailto:hunterbiersdorff@gmail.com">hunterbiersdorff@gmail.com</a></p>
-      <p><strong>Phone:</strong> 408-466-4031</p>
-      <p><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/YOURUSERNAME" target="_blank">linkedin.com/in/YOURUSERNAME</a></p>
-      <p><strong>GitHub:</strong> <a href="https://github.com/YOURUSERNAME" target="_blank">github.com/YOURUSERNAME</a></p>
-    </div>
-  </section>
+  <div class="profile">
+    <img src="assets/photo.jpg" alt="Hunter Biersdorff">
+    <h1>Hello! I'm Hunter</h1>
+    <p>A technical support engineer with a passion for problem-solving, communication, and clean tech.</p>
+  </div>
 
   <footer>
-    © 2025 Hunter Biersdorff — Designed with focus & flow.
+    © 2025 Hunter Biersdorff — Built with HTML & style.
   </footer>
 
 </body>
