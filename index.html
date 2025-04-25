@@ -102,22 +102,26 @@
     }
 
     /* Fancy Quote Styles */
-    blockquote {
-      font-family: 'Georgia', serif;
-      font-size: 1.8rem;
-      font-style: italic;
-      margin: 3rem 0;
-      padding: 2rem;
-      background: #e0e0e0; /* Light gray background */
-      border-left: 5px solid #333; /* Dark gray left border */
+    .quote-box {
+      background-color: #444;  /* Slightly lighter background for the box */
+      color: #fff;
+      font-style: italic;      /* Make the font italic */
+      font-family: 'Cursive', sans-serif; /* Cursive style font */
+      padding: 20px;
+      border-radius: 10px;
+      margin-top: 30px;
+      display: inline-block;   /* Makes the box fit content */
+      max-width: 80%;         /* Makes the box responsive */
       text-align: center;
-      max-width: 800px;
-      margin-left: auto;
-      margin-right: auto;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  /* Adds a shadow for depth */
     }
 
-    blockquote p {
-      margin-bottom: 1rem;
+    .quote-box span {
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
     }
 
     blockquote footer {
