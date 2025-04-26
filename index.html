@@ -14,8 +14,8 @@
 
     body {
       font-family: 'serif', sans-serif;
-      background: #f4f4f4; /* Light gray background */
-      color: #333; /* Dark gray text */
+      background: #f4f4f4;
+      color: #333;
       line-height: 1.5;
     }
 
@@ -25,7 +25,7 @@
     }
 
     p {
-      color: #555; /* Lighter gray for paragraph text */
+      color: #555;
     }
 
     /* Header Styles */
@@ -34,7 +34,7 @@
       justify-content: space-between;
       align-items: center;
       padding: 2rem 3rem;
-      background: #333; /* Dark gray background */
+      background: #333;
       box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
     }
 
@@ -42,7 +42,7 @@
       font-size: 2.5rem;
       text-transform: uppercase;
       letter-spacing: 2px;
-      color: #fff; /* White text in header */
+      color: #fff;
     }
 
     nav {
@@ -52,13 +52,13 @@
 
     nav a {
       text-decoration: none;
-      color: #fff; /* White links */
+      color: #fff;
       font-weight: 500;
       transition: color 0.3s ease;
     }
 
     nav a:hover {
-      color: #ddd; /* Light gray on hover */
+      color: #ddd;
     }
 
     /* Main Section Styles */
@@ -67,9 +67,9 @@
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      height: 100vh;
-      text-align: center;
+      min-height: calc(100vh - 140px); /* Adjust for header/footer height */
       padding: 2rem;
+      text-align: center;
       color: #333;
     }
 
@@ -83,8 +83,9 @@
 
     .profile img {
       border-radius: 50%;
-      width: 200px;
-      height: 200px;
+      width: 220px;
+      max-width: 90%;
+      height: auto;
       object-fit: cover;
       box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
     }
@@ -99,25 +100,29 @@
       font-size: 1.2rem;
       line-height: 1.8;
       margin: 0 auto;
+      padding: 0 1rem;
     }
 
-    .btn:hover {
-      background-color: #333; /* Darker gray on hover */
+    /* Buttons */
+    .btn, .about-link {
+      display: inline-block;
+      margin: 0.5rem;
+      padding: 0.75rem 1.5rem;
+      font-size: 1rem;
+      color: #fff;
+      background-color: #555;
+      text-decoration: none;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
     }
 
-    .about-link {
-      margin-top: 2rem;
-      font-size: 1.1rem;
-      color: #555;
-    }
-
-    .about-link:hover {
-      text-decoration: underline;
+    .btn:hover, .about-link:hover {
+      background-color: #333;
     }
 
     /* Footer Styles */
     footer {
-      background-color: #333; /* Dark gray background */
+      background-color: #333;
       color: #fff;
       text-align: center;
       padding: 1rem;
@@ -125,7 +130,7 @@
     }
 
     footer a {
-      color: #ddd; /* Light gray footer link */
+      color: #ddd;
       text-decoration: none;
     }
 
@@ -135,14 +140,6 @@
 
     /* Mobile Responsive */
     @media (max-width: 768px) {
-      .profile h1 {
-        font-size: 2.5rem;
-      }
-
-      .profile p {
-        font-size: 1rem;
-      }
-
       header {
         flex-direction: column;
         padding: 1rem;
@@ -151,9 +148,23 @@
       header h1 {
         font-size: 2rem;
       }
+
+      nav {
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      .profile h1 {
+        font-size: 2.5rem;
+      }
+
+      .profile p {
+        font-size: 1rem;
+      }
     }
   </style>
 </head>
+
 <body>
 
   <header>
@@ -167,10 +178,11 @@
     </nav>
   </header>
 
+  <main>
     <div class="profile">
       <img src="Assets/IMG_1805.JPEG" alt="Hunter Biersdorff" />
       <h1>Hunter Biersdorff</h1>
-      <p>Welcome to my personal portfolio! I’m a data center technician with a Bachelor’s in physics and a strong interest in transitioning into development or data analysis. While my formal experience is rooted in managing physical infrastructure and troubleshooting at the data center level, I’ve built a strong foundation in analytical thinking and technical systems. I’m now actively learning coding and data tools to bridge into software or analytics, and I’m excited to grow in a role where I can bring curiosity, discipline, and a fresh perspective to solving problems.</p>
+      <p>Welcome to my personal portfolio! I’m a data center technician with a Bachelor’s in Physics and a strong interest in transitioning into development or data analysis. While my formal experience is rooted in managing physical infrastructure and troubleshooting at the data center level, I’ve built a strong foundation in analytical thinking and technical systems. I’m now actively learning coding and data tools to bridge into software or analytics, and I’m excited to grow in a role where I can bring curiosity, discipline, and a fresh perspective to solving problems.</p>
       <a href="resume.html" class="btn">View My Resume</a>
       <a href="about.html" class="about-link">Learn more about me</a>
     </div>
