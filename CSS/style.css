@@ -7,10 +7,13 @@
 
 body {
   font-family: 'Roboto', sans-serif;
-  background: #F4F4F4; /* Light grey background */
-  color: #333333; /* Matte black text */
+  background: #f4f4f4; /* Light gray background */
+  color: #333;
   line-height: 1.6;
-  overflow-x: hidden; /* Prevent horizontal scroll */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100vh;
 }
 
 /* Header Styles */
@@ -19,94 +22,82 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 2rem 3rem;
-  background: #3B3B3B; /* Dark matte grey background */
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-  position: sticky;
-  top: 0;
-  z-index: 10;
+  background: #333; /* Dark gray background */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
 }
 
 header h1 {
   font-size: 2.5rem;
-  color: #F4F4F4; /* Light text */
-  letter-spacing: 1px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #fff; /* White text in header */
 }
 
 nav {
   display: flex;
-  gap: 1.5rem;
+  gap: 1rem;
 }
 
 nav a {
   text-decoration: none;
-  color: #F4F4F4;
+  color: #fff; /* White links */
   font-weight: 500;
   transition: color 0.3s ease;
-  padding-bottom: 4px;
 }
 
 nav a:hover {
-  color: #A0A0A0;
-  border-bottom: 2px solid #A0A0A0; /* Subtle underline on hover */
+  color: #ddd; /* Light gray on hover */
 }
 
-/* Main Content Area */
-main {
-  max-width: 1200px;
-  margin: 4rem auto;
+/* Hero Section - Centering the Photo */
+.hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Take full viewport height */
+  text-align: center;
   padding: 0 2rem;
 }
 
-/* Card Layout for Projects */
-.card {
-  background: #FFFFFF;
-  padding: 2rem;
-  border-radius: 10px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
-  margin-bottom: 3rem;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+.photo-container {
+  width: 200px; /* Set the size of the circle */
+  height: 200px;
+  border-radius: 50%; /* Make it a circle */
+  overflow: hidden; /* Hide the overflowing image parts */
+  margin: 0 auto; /* Center horizontally */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Optional: Add shadow for a polished effect */
 }
 
-.card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+.profile-photo {
+  width: 100%; /* Make the image take up the full width of the container */
+  height: 100%; /* Make the image take up the full height of the container */
+  object-fit: cover; /* Ensure the image covers the circular container without distorting */
+  border-radius: 50%; /* Ensure the image itself is also round */
 }
 
-h2 {
-  font-size: 1.8rem;
-  margin-bottom: 1rem;
-  color: #333333;
-}
-
-p {
-  color: #666666;
-  font-size: 1rem;
-}
-
-a.button {
-  display: inline-block;
-  margin-top: 1rem;
-  padding: 0.75rem 1.5rem;
-  background: #A0A0A0;
-  color: #fff;
-  text-decoration: none;
-  font-weight: 500;
-  border-radius: 5px;
-  transition: background 0.3s ease;
-}
-
-a.button:hover {
-  background: #8A8A8A;
+/* Main Section */
+main {
+  max-width: 900px;
+  margin: 3rem auto;
+  padding: 0 1rem;
 }
 
 /* Resume Section Styles */
 .resume-container {
-  max-width: 1200px;
-  margin: 4rem auto;
-  background: #FFFFFF;
-  padding: 3rem;
+  max-width: 1200px; /* Larger width for the resume viewer */
+  margin: 2rem auto;
+  background: #fff; /* White background for clean design */
   border-radius: 10px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: calc(100vh - 100px); /* Occupy most of the viewport */
+  overflow: hidden;
 }
 
 .pdf-viewer {
@@ -117,16 +108,15 @@ a.button:hover {
 
 /* Footer Styles */
 footer {
-  background-color: #3B3B3B;
-  color: #F4F4F4;
+  background-color: #333; /* Dark gray footer */
+  color: #fff;
   text-align: center;
-  padding: 2rem;
+  padding: 1rem;
   font-size: 1rem;
-  margin-top: 4rem;
 }
 
 footer a {
-  color: #A0A0A0;
+  color: #ddd;
   text-decoration: none;
 }
 
@@ -145,21 +135,94 @@ footer a:hover {
     font-size: 2rem;
   }
 
-  nav {
-    flex-direction: column;
-    align-items: center;
-    margin-top: 1rem;
-  }
-
-  .card {
-    padding: 1.5rem;
+  .resume-container {
+    padding: 1rem;
   }
 
   .pdf-viewer {
+    width: 100%;
     height: 80vh;
   }
+}
 
-  footer {
-    padding: 1rem;
-  }
+/* Projects Section */
+.card {
+  padding: 1.5rem;
+  background: #f8f8f8;
+  border-radius: 12px;
+  margin-bottom: 2rem;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+h2 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+p {
+  color: #555;
+}
+
+a.button {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.5rem 1.2rem;
+  background: #0071e3;
+  color: #fff;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+a.button:hover {
+  background: #005bb5;
+}
+
+/* Contact Form */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+form input, form textarea {
+  padding: 1rem;
+  font-size: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  outline: none;
+}
+
+form input:focus, form textarea:focus {
+  border-color: #0071e3;
+}
+
+form button {
+  padding: 1rem;
+  background-color: #0071e3;
+  color: white;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+form button:hover {
+  background-color: #005bb5;
+}
+
+/* General Footer Styling */
+footer {
+  text-align: center;
+  font-size: 1rem;
+  color: #888;
+  padding: 2rem 1rem;
+  background-color: #f9f9f9;
 }
