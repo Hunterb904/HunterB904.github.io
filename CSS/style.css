@@ -117,86 +117,6 @@ footer a:hover {
   text-decoration: underline;
 }
 
-/* Contact Page Styling */
-.contact {
-  padding: 4rem 2rem;
-  background-color: #f8f8f8;
-}
-
-.contact h2 {
-  font-size: 2.5rem;
-  text-align: center;
-  margin-bottom: 2rem;
-  color: #333;
-}
-
-.contact form {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 1.5rem;
-  max-width: 600px;
-  margin: 0 auto;
-  background-color: #fff;
-  padding: 2rem;
-  border-radius: 8px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-}
-
-.contact form label {
-  font-size: 1.1rem;
-  color: #333;
-  margin-bottom: 0.5rem;
-  text-align: left;
-  width: 100%;
-}
-
-.contact form input,
-.contact form textarea {
-  width: 100%;
-  padding: 1rem;
-  font-size: 1rem;
-  border-radius: 8px;
-  border: 1px solid #ddd;
-  margin-bottom: 1rem;
-}
-
-.contact form input:focus,
-.contact form textarea:focus {
-  border-color: #0071e3;
-  outline: none;
-}
-
-.contact form button {
-  padding: 1rem 2rem;
-  background-color: #0071e3;
-  color: white;
-  font-size: 1.2rem;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.contact form button:hover {
-  background-color: #005bb5;
-}
-
-@media (max-width: 768px) {
-  .contact form {
-    padding: 1rem;
-  }
-
-  .contact form input,
-  .contact form textarea {
-    font-size: 1rem;
-  }
-
-  .contact form button {
-    font-size: 1.1rem;
-  }
-}
-
 /* Projects Section */
 .projects {
   padding: 4rem 2rem;
@@ -228,7 +148,7 @@ footer a:hover {
   box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
 }
 
-.projects .project-image {
+.projects .project-image img {
   width: 100%;
   height: 200px;
   object-fit: cover;
@@ -331,4 +251,65 @@ footer a:hover {
   width: 100%;
   height: 90vh;
   border: none;
+}
+
+/* Contact Page Styling */
+.contact {
+  padding: 3rem 2rem;
+  background-color: #f8f8f8;
+}
+
+.contact h2 {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #333;
+}
+
+.contact form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.contact form input,
+.contact form textarea {
+  width: 100%;
+  padding: 1rem;
+  font-size: 1rem;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+}
+
+.contact form button {
+  padding: 1rem 2rem;
+  background-color: #0071e3;
+  color: white;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.contact form button:hover {
+  background-color: #005bb5;
+}
+
+@media (max-width: 768px) {
+  .contact form {
+    padding: 1rem;
+  }
+
+  .contact form input,
+  .contact form textarea {
+    font-size: 1rem;
+  }
+
+  .contact form button {
+    font-size: 1.1rem;
+  }
 }
